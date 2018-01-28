@@ -33,7 +33,17 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /(app)/,
                 loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
+                ]
             }
+
 
             // {
             //     test: /\.css$/,
