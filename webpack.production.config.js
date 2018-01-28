@@ -26,20 +26,16 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: "style-loader"
-                    }, {
-                        loader: "css-loader",
-                        options: {
-                            modules: true, // 指定启用css modules
-                            localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
-                        }
-                    }, {
-                        loader: "postcss-loader"
-                    }
+                test:/\.less$/,
+                use:[
+                    'style-loader'
+                    ,'css-loader'
+                    ,'less-loader'
                 ]
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             }
         ]
     },

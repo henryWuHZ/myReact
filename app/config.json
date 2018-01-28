@@ -1,3 +1,4 @@
 {
-  "greetConfig": "greet"
+  "greetConfig": "greet",
+  "listConfig": "List"
 }

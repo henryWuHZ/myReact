@@ -23,22 +23,34 @@ module.exports = {
                 },
                 exclude: /node_modules/
             },
+            //自己的css代码开启css模块化 对antd关闭css模块化
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: "style-loader"
-                    }, {
-                        loader: "css-loader",
-                        options: {
-                            modules: true, // 指定启用css modules
-                            localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
-                        }
-                    }, {
-                        loader: "postcss-loader"
-                    }
-                ]
+                exclude: /(node_modules)/,
+                loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
+            },
+            {
+                test: /\.css$/,
+                exclude: /(app)/,
+                loader: 'style-loader!css-loader'
             }
+
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         {
+            //             loader: "style-loader"
+            //         }, {
+            //             loader: "css-loader",
+            //             options: {
+            //                 modules: true, // 指定启用css modules
+            //                 localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
+            //             }
+            //         }, {
+            //             loader: "postcss-loader"
+            //         }
+            //     ]
+            // }
         ]
     },
     plugins: [
