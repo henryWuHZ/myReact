@@ -29,7 +29,7 @@ export default class PCHeader extends React.Component{
                         <Col span={4}>
                             <a href="/" className={pcHeaderStyle.logo}>
                                 <img src={logo} alt="logo"/>
-                                <span>MY LOGO</span>
+                                <span>企业员工交互平台</span>
                             </a>
                         </Col>
                         <Col span={16}>

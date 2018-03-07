@@ -24,15 +24,19 @@ module.exports = {
                 exclude: /node_modules/
             },
             //自己的css代码开启css模块化 对antd关闭css模块化
+            // {
+            //     test: /\.css$/,
+            //     exclude: /(node_modules)/,
+            //     loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
+            // },
+            // {
+            //     test: /\.css$/,
+            //     exclude: /(app)/,
+            //     loader: 'style-loader!css-loader'
+            // },
             {
                 test: /\.css$/,
-                exclude: /(node_modules)/,
-                loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
-            },
-            {
-                test: /\.css$/,
-                exclude: /(app)/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader?importLoaders=1',
             },
             {
                 test: /\.(png|jpg|gif)$/,

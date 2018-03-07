@@ -7,7 +7,7 @@
      height: 48px;
  }
  .logo span{
-     font-size: 24px;
+     font-size: initial;
      padding-left: 5px;
  }
  .pcHeader {
